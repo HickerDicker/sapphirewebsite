@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --background0: #1c1a27;
+  --background: #24222f;
+  --background1: #33313e;
+  --text: #fff;
+  --accent: #7446a2;
+  --sidebarwidth: 200px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+details {
+  font-size: 16px;
+  background-color: var(--background1);
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+details[open] > summary {
+  margin-bottom: 1rem;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.sidenav {
+  height: 100%;
+  width: var(--sidebarwidth);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--background0);
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.bar {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.bar a {
+  padding-left: 20px;
+}
+
+.bar:hover {
+  background-color: var(--background);
+}
+
+.bar {
+  border-bottom-color: #7446a2;
+  border-bottom-width: 3px;
+  border-bottom-style: none;
+}
+
+.main {
+  margin-left: var(--sidebarwidth);
+  padding: 20px;
+}
+.main .list {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.main[activemain] {
+  display: none;
+}
+
+details {
+  font-size: 16px;
+  background-color: var(--background1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text);
+}
+
+details[open] > summary {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+a:visited {
+  color: var(--text);
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
