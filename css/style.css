@@ -29,6 +29,10 @@ details[open] > summary {
   margin-bottom: 1rem;
 }
 
+iframe {
+  border: none;
+}
+
 .faq {
   display: flex;
   flex-direction: column;
