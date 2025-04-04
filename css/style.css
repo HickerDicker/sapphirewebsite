@@ -1,128 +1,141 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
 :root {
-  --background0: #1c1a27;
-  --background: #24222f;
-  --background1: #33313e;
-  --text: #fff;
+  --sidebar-bg: #1c1a27;
+  --sidebar-hover-bg: #2e2535;
+  --content-bg: #24222f;
+  --details-bg: #33313e;
+  --text-color: #ffffff;
   --accent: #7446a2;
-  --sidebarwidth: 200px;
+  --sidebar-width: 240px;
+  --transition-speed: 0.3s;
   font-family: "Inter", sans-serif;
-  font-weight: 500;
-  color: var(--text);
-  background-color: var(--background);
 }
-
-details {
-  font-size: 16px;
-  background-color: var(--background1);
-  padding: 10px;
-  margin-bottom: 5px;
-  border-radius: 10px;
+* {
+  box-sizing: border-box;
 }
-
-summary {
-  cursor: pointer;
-  font-size: 24px;
+body {
+  margin: 0;
+  background-color: var(--content-bg);
+  color: var(--text-color);
 }
-
-details[open] > summary {
-  margin-bottom: 1rem;
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-
-iframe {
-  border: none;
-}
-
-.faq {
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-}
-
 .sidenav {
-  height: 100%;
-  width: var(--sidebarwidth);
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
-  background-color: var(--background0);
-  overflow-x: hidden;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
   padding-top: 20px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.4);
+  transition: background-color var(--transition-speed);
 }
-
-.logo {
+.sidenav .logo {
   width: 64px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  display: block;
 }
-
-.bar {
-  padding: 10px;
+.sidenav .bar {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  padding: 12px 20px;
   cursor: pointer;
+  transition: transform var(--transition-speed),
+    background-color var(--transition-speed);
+  border-bottom: 3px solid transparent;
 }
-
-.bar a {
-  padding-left: 20px;
+.sidenav .bar:hover {
+  background-color: var(--sidebar-hover-bg);
+  transform: scale(1.03);
 }
-
-.bar:hover {
-  background-color: var(--background);
+.sidenav .bar.active {
+  background-color: var(--sidebar-hover-bg);
+  border-bottom: 3px solid var(--accent);
+  transform: scale(1.03);
 }
-
-.bar {
-  border-bottom-color: #7446a2;
-  border-bottom-width: 3px;
-  border-bottom-style: none;
+.sidenav .bar img {
+  width: 24px;
+  height: 24px;
 }
-
-.main {
-  margin-left: var(--sidebarwidth);
-  padding: 20px;
-}
-.main .list {
-  margin-bottom: 20px;
-  flex: 1;
-}
-
-.main[activemain] {
-  display: none;
-}
-
-details {
+.sidenav .bar a {
+  margin-left: 10px;
   font-size: 16px;
-  background-color: var(--background1);
-  padding: 10px;
-  border-radius: 10px;
+  color: var(--text-color);
+  text-decoration: none;
 }
-
-summary {
+.main {
+  margin-left: var(--sidebar-width);
+  padding: 40px;
+  background-color: var(--content-bg);
+  min-height: 100vh;
+  transition: all var(--transition-speed);
+}
+.pop {
+  animation: fadeInZoom 0.3s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+h1,
+h2 {
+  color: var(--accent);
+  margin-top: 0;
+}
+.details-container {
+  background-color: var(--details-bg);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform var(--transition-speed),
+    background-color var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+.details-container:hover {
+  background-color: var(--sidebar-hover-bg);
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+details {
+  border: none;
+}
+details summary {
+  font-size: 18px;
   cursor: pointer;
-  font-size: 20px;
-  color: var(--text);
+  padding: 5px 0;
+  outline: none;
 }
-
-details[open] > summary {
-  margin-bottom: 1rem;
+details p {
+  margin: 10px 0 0 20px;
+  line-height: 1.6;
 }
-
 ul {
-  list-style-type: disc;
   margin-left: 20px;
   line-height: 1.6;
 }
-
-a:visited {
-  color: var(--text);
-}
-
 a {
-  color: var(--text);
+  color: var(--accent);
   text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.video-wrapper {
+  max-width: 960px;
+  margin: 20px auto;
+}
+.video-wrapper iframe {
+  width: 100%;
+  height: 540px;
+  border: none;
 }

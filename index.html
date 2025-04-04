@@ -1,157 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SapphireOS</title>
-    <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body __processed_207f8aee-670e-4baa-80ee-feeab970ad57__="true">
+    <link rel="icon" href="img/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="sidenav">
-        <img src="img/logo.png" class="logo">
-        <div class="bar" id="Bar-Home"><img src="img/Home.png"><a>Home</a></div>
-        <div class="bar" id="Bar-Faq"><img src="img/Faq.png"><a>Faq</a></div>
-        <div class="bar" id="Bar-Unsupported"><img src="img/Unsupported.png"><a>Unsupported list</a></div>
-        <div class="bar" id="Bar-OS"><img src="img/SapphireOS.png" width="32"><a>SapphireOS</a></div>
-        <div class="bar" id="Bar-Tool"><img src="img/Tools.png" width="32"><a>Sapphire Tools</a>
-        </div>
-    </div>
-    <div class="main Home" id="Home">
-        <h1>Home</h1>
-        <h2>Welcome to SapphireOS</h2>
-        <p>On this page, you’ll find the FAQ section. If you have any suggestions, feel free to share them on our Discord server.</p>
-        <p>You'll also find the unsupported features list, which is essential reading for anyone interested in using SapphireOS. Additionally, we offer showcases of the OS and details about available paid tools.</p>
-        
-        <h2>Explore and Enjoy!</h2>
-        <p>We hope you enjoy exploring SapphireOS and everything it has to offer! Be sure to check out the other sections of the site for more information and updates.</p>
-                <h1>Changelog</h1>
-        <h4>common last update changes</h4>
-        <p>+ Updated to The November Windows Update (December isn't a feature update only security so I didn't bother)</p>
-        <p>+ Updated Reg</p>
-        <p>+ Updated Tool (Bug Fixes here and there)</p>
-        <p>+ Updated NTLite XMLs for both SL and UL</p>
-        <p>+ Brought Back Store for SL for this release</p>
-		<p>+ Updated Script</p>
+      <img src="img/logo.png" alt="Logo" class="logo" />
+      <div class="bar" id="Bar-Home">
+        <img src="img/Home.png" alt="Home" />
+        <a>Home</a>
+      </div>
+      <div class="bar" id="Bar-Faq">
+        <img src="img/Faq.png" alt="FAQ" />
+        <a>FAQ</a>
+      </div>
+      <div class="bar" id="Bar-Unsupported">
+        <img src="img/Unsupported.png" alt="Unsupported" />
+        <a>Unsupported List</a>
+      </div>
+      <div class="bar" id="Bar-OS">
+        <img src="img/SapphireOS.png" alt="SapphireOS" width="32" />
+        <a>SapphireOS</a>
+      </div>
+      <div class="bar" id="Bar-Tool">
+        <img src="img/Tools.png" alt="Sapphire Tools" width="32" />
+        <a>Sapphire Tools</a>
+      </div>
     </div>
 
-    <div class="main Faq" id="Faq">
-        <h1>FAQ</h1>
+    <div class="main" id="Home">
+      <h1>Home</h1>
+      <h2>Welcome to SapphireOS</h2>
+      <p>
+        Explore our features including FAQs, an unsupported features list, a
+        showcase of SapphireOS, and more! Join our Discord server for updates
+        and suggestions.
+      </p>
+      <h1>Changelog</h1>
+      <h4>Latest Updates</h4>
+      <ul>
+        <li>
+          Updated to the February Cumulative Update
+        </li>
+        <li>Updated registry tweaks.</li>
+        <li>Updated Script tweaks.</li>
+        <li>Updated Powerplan tweaks.</li>
+        <li>Bug fixes and improvements in SapphireTool.</li>
+        <li>
+          Improved NTLite XMLs for both Superlite and Ultralite versions.
+        </li>
+        <li>Fixed Store for Superlite and Ultralite in this release.</li>
+        <li>Switched out 26 for 2A in Win32PS.</li>
+      </ul>
+    </div>
+
+    <div class="main" id="Faq" style="display: none;">
+      <h1>FAQ</h1>
+      <div class="details-container">
         <details>
-            <summary>Does SapphireOS support X?</summary>
-            <p>SapphireOS removes components and disables many services, so not everything may be supported by default. If something does not work, try enabling default services to see if a service issue is causing the problem. If it still doesn’t work, it may simply be unsupported.</p>
+          <summary>Does SapphireOS support X?</summary>
+          <p>
+            Some services/components are disabled by default. If you face
+            issues, try enabling the standard services. If it still fails,
+            that feature may simply be unsupported.
+          </p>
         </details>
-            
+      </div>
+      <div class="details-container">
         <details>
-            <summary>Why SapphireOS?</summary>
-            <p>SapphireOS is mostly open source, though I stopped sharing my NTlite XMLs a while ago because I keep updating them. Personally, I would describe it as “source available” rather than fully open source.</p>
+          <summary>Why SapphireOS?</summary>
+          <p>
+            SapphireOS is “source available” rather than fully open source.
+            The NTlite XMLs are the only non available component.
+          </p>
         </details>
-            
+      </div>
+      <div class="details-container">
         <details>
-            <summary>Why isn’t my X driver working on Windows Server?</summary>
-            <p>Windows Server 2022 is neither Windows 10 nor Windows 11 (it's version 20348), which means many drivers particularly AMD and some Intel NICs aren’t compatible. This limitation is due to the driver developers, not SapphireOS, so please keep that in mind if you’re running Server and encounter network or driver issues. :&gt;</p>
+          <summary>
+            Why isn’t X driver working on Windows Server?
+          </summary>
+          <p>
+            Windows Server 2022 differs from standard Windows versions,
+            which can cause compatibility issues with some drivers, especially
+            those from AMD and certain Intel NICs.
+          </p>
         </details>
-            
+      </div>
+      <div class="details-container">
         <details>
-            <summary>What is the difference between Superlite and Ultralite?</summary>
-            <p>This is our most frequently asked question! The main difference is that Ultralite has even more components removed than Superlite, catering to users who want a lighter ISO and are less concerned about compatibility. Performance differences are minimal, though Ultralite may boot slightly faster as it loads fewer files. Both versions include the same system tweaks.</p>
+          <summary>Superlite vs Ultralite?</summary>
+          <p>
+            Ultralite removes more components than Superlite for a smaller
+            ISO and slightly faster boot times. The core tweaks remain the same.
+          </p>
         </details>
-            
+      </div>
+      <div class="details-container">
         <details>
-            <summary>Who made this website (for the most part)?</summary>
-            <p>CatNowBlue, who also created the WinPE background, server banner, and logo, is the primary creator of this website. Shout-out to her! :&gt;</p>
+          <summary>Who built this website?</summary>
+          <p>
+            The main developer behind this design and its graphical elements are Hickensa CatNowBlue and Pitachok.
+          </p>
         </details>
+      </div>
     </div>
 
-    <div class="main Unsupported" id="Unsupported">
-        <h1>Unsupported</h1>
-        <div class="list sl">
-            <details>
-                <summary>Unsupported List (Superlite)</summary>
-                <ul>
-                    <li>Manual Installation Through setup.exe</li>
-                    <li>Bitlocker Drive Encryption</li>
-                    <li>Windows To Go</li>
-                    <li>Windows Defender</li>
-                    <li>Biometric Devices</li>
-                    <li>Windows Backup/Restore Points</li>
-                    <li>Embedded Mode</li>
-                    <li>Easy Transfer</li>
-                    <li>The Get Started and Windows Backup apps</li>
-                    <li>Telephony</li>
-                    <li>Floppy Disks</li>
-                    <li>NFC/POS devices</li>
-                    <li>Cracked Software (may work but you are NOT getting support for it)</li>
-                    <li>Game Cheats (may work but you are NOT getting support for it)</li>
-                    <li>Onedrive</li>
-                    <li>Cortana</li>
-                    <li>Windows update</li>
-                    <li>Windows recovery</li>
-                    <li>The OOBE by default (still can be accessed through sysprep if you want to)</li>
-                    <li>Some Drivers on Windows Server (Not my fault!) Like AMD Video Drivers and Some Network Drivers Same for Some apps</li>
-                </ul>
-            </details>
-        </div>
-
-        <div class="list ul">
-            <details>
-                <summary>Unsupported List (Ultralite)</summary>
-                <ul>
-                    <li>Manual Installation Through setup.exe</li>
-                    <li>Bitlocker Drive Encryption</li>
-                    <li>Windows To Go</li>
-                    <li>Windows Defender</li>
-                    <li>Biometric Devices</li>
-                    <li>Windows Backup/Restore Points</li>
-                    <li>Embedded Mode</li>
-                    <li>Kernel Debugging</li>
-                    <li>Hyper-v</li>
-                    <li>Smartcard</li>
-                    <li>Printing</li>
-                    <li>Spell checking</li>
-                    <li>Search indexing</li>
-                    <li>Mixed reality (steamvr with quest works (has been tested))</li>
-                    <li>Speech recognition (may break games like Hogwarts Legacy and Phasmophobia iirc)</li>
-                    <li>Virtualization Based Security (VBS)</li>
-                    <li>Easy Transfer</li>
-                    <li>The Get Started and Windows Backup apps</li>
-                    <li>Telephony</li>
-                    <li>Floppy Disks</li>
-                    <li>NFC/POS devices</li>
-                    <li>Onedrive</li>
-                    <li>Cortana</li>
-                    <li>Windows update</li>
-                    <li>Windows recovery</li>
-                    <li>The OOBE by default</li>
-                    <li>IME (languages such as Korean, Japanese, Chinese)</li>
-                    <li>57 bit liear addressing</li>
-                    <li>Touch Screen Devices</li>
-                    <li>Some Drivers on Windows Server (Not my fault!) Like AMD Video Drivers and Some Network Drivers Same for Some apps</li>
-                    <li>Cracked Software (may work but you are NOT getting support for it)</li>
-                    <li>Game Cheats (may work but you are NOT getting support for it)</li>
-                </ul>
-            </details>
-        </div>
+    <div class="main" id="Unsupported" style="display: none;">
+      <h1>Unsupported</h1>
+      <div class="details-container">
+        <details>
+          <summary>Unsupported List (Superlite)</summary>
+          <ul>
+            <li>Manual Installation through setup.exe</li>
+            <li>Bitlocker Drive Encryption</li>
+            <li>Windows To Go</li>
+            <li>Windows Defender</li>
+            <li>Biometric Devices</li>
+            <li>Windows Backup/Restore Points</li>
+            <li>Embedded Mode</li>
+            <li>Easy Transfer</li>
+            <li>The Get Started and Windows Backup apps</li>
+            <li>Telephony</li>
+            <li>Floppy Disks</li>
+            <li>NFC/POS devices</li>
+            <li>
+              Cracked Software (may work but support is not provided)
+            </li>
+            <li>
+              Game Cheats (may work but support is not provided)
+            </li>
+            <li>Onedrive</li>
+            <li>Cortana</li>
+            <li>Windows Updates (Heavily Disabled)</li>
+            <li>Windows Recovery</li>
+            <li>Default OOBE</li>
+            <li>Some drivers on Windows Server</li>
+          </ul>
+        </details>
+      </div>
+      <div class="details-container">
+        <details>
+          <summary>Unsupported List (Ultralite)</summary>
+          <ul>
+            <li>Manual Installation through setup.exe</li>
+            <li>Bitlocker Drive Encryption</li>
+            <li>Windows To Go</li>
+            <li>Windows Defender</li>
+            <li>Biometric Devices</li>
+            <li>Windows Backup/Restore Points</li>
+            <li>Embedded Mode</li>
+            <li>Kernel Debugging</li>
+            <li>Hyper-V</li>
+            <li>Smartcard Support</li>
+            <li>Printing</li>
+            <li>Spell Checking</li>
+            <li>Search Indexing</li>
+            <li>Mixed Reality</li>
+            <li>Speech Recognition</li>
+            <li>
+              Virtualization-Based Security (VBS)
+            </li>
+            <li>Easy Transfer</li>
+            <li>The Get Started and Windows Backup apps</li>
+            <li>Telephony</li>
+            <li>Floppy Disks</li>
+            <li>NFC/POS devices</li>
+            <li>Onedrive</li>
+            <li>Cortana</li>
+            <li>Windows Updates</li>
+            <li>Windows Recovery</li>
+            <li>Default OOBE</li>
+            <li>
+              IME for languages like Korean, Japanese, Chinese
+            </li>
+            <li>57-bit linear addressing</li>
+            <li>Touch Screen Devices</li>
+            <li>Some drivers on Windows Server</li>
+            <li>
+              Cracked Software (may work but support is not provided)
+            </li>
+            <li>
+              Game Cheats (may work but support is not provided)
+            </li>
+          </ul>
+        </details>
+      </div>
     </div>
 
-    <div class="main OS" id="OS">
-        <h1>SapphireOS</h1>
-        <p>SapphireOS is a modified Windows 10 (22H2), Windows 11 (23H2/24H2), and Windows Server 2022 ISO designed to provide an optimal gaming experience. It offers easy access to post-install tweaks through the included SapphireTool. Below is a showcase of the OS.</p>
+    <div class="main" id="OS" style="display: none;">
+      <h1>SapphireOS</h1>
+      <p>
+        SapphireOS is a modified Windows ISO designed for gaming. It offers a
+        curated set of tweaks and performance optimizations alongside powerful
+        post-install utilities.
+      </p>
     </div>
 
-    <div class="main Tool" id="Tool">
-        <h1>SapphireTool</h1>
-        <p>SapphireTool is the post-installation utility in SapphireOS, as well as a paid tweaking tool offering a wide variety of customization options and performance tweaks to enhance your system. Below is a showcase of the App.</p>
-        <iframe 
-        width="960" 
-        height="540" 
-        src="https://www.youtube.com/embed/edmBtQ1JoHA?si=NHelJZ2OGqQtvmYo" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
+    <div class="main" id="Tool" style="display: none;">
+      <h1>SapphireTool</h1>
+      <p>
+        SapphireTool is our post-installation utility that provides a range of
+        customization options and performance tweaks to enhance your system that also has a paid counter-part which offers even more performance enhancing tweaks.
+        Check out the demo below for an outdated version of the premium offering:
+      </p>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/edmBtQ1JoHA?si=NHelJZ2OGqQtvmYo"
+          title="SapphireTool Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
 
-<script src="scripts/script.js"></script>
-<!-- Made By Pitachok -->
-</body>
+    <script src="scripts/script.js"></script>
+    <!-- Made in part by Pitachok, Hickensa and CatNowBlue atp -->
+  </body>
 </html>
